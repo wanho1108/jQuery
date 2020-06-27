@@ -3,7 +3,11 @@ declare module "jQuery" {
     export interface JQuery {
       fn: {
         version: string;
-        init?: (selector: string, context: HTMLElement) => void;
+        init?: (
+          selector: string | object | undefined,
+          context: HTMLElement | undefined
+        ) => void;
+        extends?: (methods: object) => void;
       };
       prototype: any;
     }
