@@ -4,7 +4,7 @@
   "description": "> jQuery 라이브러리 만들기 스터디 프로젝트",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "parcel index.html"
   },
   "repository": {
@@ -23,10 +23,28 @@
       "@babel/preset-env"
     ]
   },
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "\\.test\\.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "globals": {
+      "ts-jest": {
+        "enableTsDiagnostics": true
+      }
+    }
+  },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
+    "@types/jest": "^26.0.3",
+    "jest": "^26.1.0",
     "parcel-bundler": "^1.12.4",
+    "ts-jest": "^26.1.1",
     "typescript": "^3.9.2"
   }
 }
