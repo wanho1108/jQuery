@@ -1,5 +1,8 @@
+import jQuery from "../core";
 import addClass from "./addClass";
 
-export default {
+jQuery.fn.extends({
   addClass,
-};
+});
+
+export default jQuery;

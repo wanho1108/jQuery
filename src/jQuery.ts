@@ -1,3 +1,4 @@
-import core from "./core";
+import jQuery from "./core/";
+import "./attributes";
 
-window.jQuery = core;
+window.$ = window.jQuery = jQuery;
